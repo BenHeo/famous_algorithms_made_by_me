@@ -16,7 +16,7 @@ yc <- rnorm(3)*max(y1)
 xyc <- data.frame(xc,yc);xyc
 ggplot(xy, aes(x=x, y=y))+geom_point()+geom_point(data=xyc, aes(x=xc,y=yc), color="red")
 
-# color them by closer centroid
+# make distance function
 dist <- function(a,b){
   d <- sqrt((a[,1]-b[,1])^2 + (a[,2]-b[,2])^2)
   return (d)
